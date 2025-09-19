@@ -1,0 +1,449 @@
+/* GitHub JS CDN Admin Styles */
+
+.github-js-cdn-admin-wrapper {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.github-js-cdn-main-content {
+    flex: 2;
+}
+
+.github-js-cdn-sidebar {
+    flex: 1;
+    max-width: 350px;
+}
+
+/* Settings Form */
+#github-js-cdn-settings-form {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.github-js-cdn-actions {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.github-js-cdn-actions .button {
+    margin-right: 10px;
+}
+
+/* Status Panel */
+.status-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.status-item:last-child {
+    border-bottom: none;
+}
+
+.status-label {
+    font-weight: 600;
+    color: #50575e;
+}
+
+.status-value {
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-success {
+    background-color: #00a32a;
+    color: white;
+}
+
+.status-error {
+    background-color: #d63638;
+    color: white;
+}
+
+.status-warning {
+    background-color: #dba617;
+    color: white;
+}
+
+/* Statistics Panel */
+.stats-item {
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.stats-item:last-child {
+    border-bottom: none;
+}
+
+.stats-number {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1d2327;
+    line-height: 1;
+}
+
+.stats-number.stats-error {
+    color: #d63638;
+}
+
+.stats-label {
+    display: block;
+    font-size: 12px;
+    color: #646970;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Setup Steps */
+.setup-steps {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.setup-steps li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+/* CDN URL Preview */
+.cdn-url-preview {
+    display: block;
+    background: #f6f7f7;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 12px;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 13px;
+    color: #50575e;
+    word-break: break-all;
+    margin-top: 8px;
+}
+
+/* Form Field Improvements */
+.form-table th {
+    width: 200px;
+    vertical-align: top;
+    padding-top: 15px;
+}
+
+.form-table td {
+    vertical-align: top;
+    padding-top: 10px;
+}
+
+.form-table .description {
+    margin-top: 8px;
+    font-style: italic;
+    color: #646970;
+}
+
+.form-table .description a {
+    text-decoration: none;
+}
+
+.form-table .description a:hover {
+    text-decoration: underline;
+}
+
+/* Notices */
+#github-js-cdn-messages .notice {
+    margin: 15px 0;
+}
+
+.github-js-cdn-temp-message {
+    position: fixed;
+    top: 32px;
+    right: 20px;
+    z-index: 9999;
+    max-width: 300px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .github-js-cdn-admin-wrapper {
+        flex-direction: column;
+    }
+    
+    .github-js-cdn-sidebar {
+        max-width: none;
+    }
+}
+
+@media (max-width: 782px) {
+    .github-js-cdn-actions .button {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        margin-right: 0;
+        text-align: center;
+    }
+    
+    .form-table th,
+    .form-table td {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+    
+    .form-table th {
+        border-bottom: none;
+    }
+}
+
+/* Loading States */
+.button.loading {
+    position: relative;
+    color: transparent !important;
+}
+
+.button.loading:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -8px 0 0 -8px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+/* Enhanced Postbox Styling */
+.github-js-cdn-sidebar .postbox {
+    margin-bottom: 20px;
+}
+
+.github-js-cdn-sidebar .postbox .hndle {
+    background: #f9f9f9;
+    border-bottom: 1px solid #e1e1e1;
+    cursor: default;
+}
+
+.github-js-cdn-sidebar .postbox .inside {
+    padding: 15px;
+}
+
+/* Field Validation */
+.form-invalid {
+    border-color: #d63638 !important;
+    box-shadow: 0 0 2px rgba(214, 54, 56, 0.8);
+}
+
+.validation-error {
+    color: #d63638;
+    font-size: 13px;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Success/Error Messages */
+.github-js-cdn-message {
+    padding: 12px;
+    margin: 15px 0;
+    border-left: 4px solid;
+    background: #fff;
+}
+
+.github-js-cdn-message.success {
+    border-left-color: #00a32a;
+    background-color: #f0f6fc;
+}
+
+.github-js-cdn-message.error {
+    border-left-color: #d63638;
+    background-color: #fcf0f1;
+}
+
+.github-js-cdn-message.warning {
+    border-left-color: #dba617;
+    background-color: #fcf9e8;
+}
+
+/* Settings Sections */
+.github-js-cdn-section {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.github-js-cdn-section-header {
+    background: #f9f9f9;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 15px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+}
+
+.github-js-cdn-section-header:hover {
+    background: #f0f0f1;
+}
+
+.github-js-cdn-section-content {
+    padding: 20px;
+}
+
+.github-js-cdn-section-toggle {
+    float: right;
+    margin-top: 2px;
+}
+
+.github-js-cdn-section-toggle:before {
+    content: "\f142";
+    font-family: dashicons;
+    font-size: 16px;
+    display: inline-block;
+    transform: rotate(0deg);
+    transition: transform 0.2s ease;
+}
+
+.github-js-cdn-section-toggle.closed:before {
+    transform: rotate(-90deg);
+}
+
+/* Help Icons */
+.github-js-cdn-help {
+    color: #646970;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.github-js-cdn-help:hover {
+    color: #2271b1;
+}
+
+.github-js-cdn-help:before {
+    content: "\f223";
+    font-family: dashicons;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+/* Progress Indicators */
+.github-js-cdn-progress {
+    background: #f0f0f1;
+    border-radius: 4px;
+    height: 8px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.github-js-cdn-progress-bar {
+    background: #00a32a;
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+/* Badge Styles */
+.github-js-cdn-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.github-js-cdn-badge.pro {
+    background: #135e96;
+    color: white;
+}
+
+.github-js-cdn-badge.free {
+    background: #646970;
+    color: white;
+}
+
+.github-js-cdn-badge.new {
+    background: #00a32a;
+    color: white;
+}
+
+/* Tooltip Styles */
+.github-js-cdn-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.github-js-cdn-tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #1d2327;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.github-js-cdn-tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #1d2327 transparent transparent transparent;
+}
+
+.github-js-cdn-tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .github-js-cdn-section {
+        background: #1d2327;
+        border-color: #3c434a;
+    }
+    
+    .github-js-cdn-section-header {
+        background: #23282d;
+        border-bottom-color: #3c434a;
+        color: #f0f0f1;
+    }
+    
+    .cdn-url-preview {
+        background: #23282d;
+        border-color: #3c434a;
+        color: #f0f0f1;
+    }
+    
+    .status-label {
+        color: #f0f0f1;
+    }
+}
